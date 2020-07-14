@@ -5,7 +5,7 @@ on:
       - master
 jobs:
   build_web:
-    name: Build Flutter (Web)
+    name: Test and Build Flutter Web App
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -13,6 +13,7 @@ jobs:
       with:
           channel: 'dev'
     - run: flutter pub get
+    - run: flutter test
     - run: flutter config --enable-web
     - run: flutter build web
     - name: Archive Production Artifact
@@ -37,4 +38,4 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          PROJECT_ID: default
+          PROJECT_ID: duas-pwa
