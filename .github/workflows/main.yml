@@ -10,7 +10,6 @@ jobs:
       my_secret: ${{secrets.TOKEN}}
     runs-on: ubuntu-latest
     steps:
-      - name: Build APK
       - uses: actions/checkout@v1
       - uses: subosito/flutter-action@v1
         with:
