@@ -1,8 +1,8 @@
-name: Build Duas App
+name: Build And Deploy Dua App
 on:
   push:
     branches:
-      - master
+      - release
 jobs:
   build_web:
     name: Test and Build Flutter Web App
