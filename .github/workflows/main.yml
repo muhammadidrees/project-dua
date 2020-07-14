@@ -7,7 +7,7 @@ jobs:
   build:
     name: Test,Build and Release web app
     env:
-      my_secret: ${{secrets.commit_secret}}
+      my_secret: ${{secrets.TOKEN}}
     runs-on: ubuntu-latest
     steps:
       - name: Build APK
