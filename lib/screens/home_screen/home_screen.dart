@@ -1,3 +1,4 @@
+import 'package:duas_pwa/screens/home_screen/ayah_card.dart';
 import 'package:duas_pwa/utils/utils.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +24,7 @@ class HomeScreen extends StatelessWidget {
         width: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: _buildChildren(context),
         ),
       ),
@@ -34,45 +36,14 @@ class HomeScreen extends StatelessWidget {
       Material(
         borderRadius: defaultBorderRadius,
         elevation: 6.0,
-        child: AyahCard(),
+        child: AyahCard(
+          ayah:
+              "رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَى وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحًا تَرْضَاهُ وَأَصْلِحْ لِي فِي ذُرِّيَّتِي إِنِّي تُبْتُ إِلَيْكَ وَإِنِّي مِنَ الْمُسْلِمِينَ",
+          translation:
+              "My Lord, enable me to be grateful for Your favor which You have bestowed upon me and upon my parents and to work righteousness of which You will approve and make righteous for me my offspring. Indeed, I have repented to You, and indeed, I am of the Muslims.",
+          reference: "Surah Al-Aḥqaf (46:15)",
+        ),
       ),
     ];
-  }
-}
-
-class AyahCard extends StatelessWidget {
-  const AyahCard({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: SizeConfig.of(context).blockSizeHorizontal * 80,
-      padding: EdgeInsets.all(SizeConfig.of(context).blockSizeHorizontal * 2),
-      child: Column(
-        children: [
-          Padding(
-            padding:
-                EdgeInsets.all(SizeConfig.of(context).blockSizeVertical * 2),
-            child: Text(
-              " رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَى وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحًا تَرْضَاهُ وَأَصْلِحْ لِي فِي ذُرِّيَّتِي إِنِّي تُبْتُ إِلَيْكَ وَإِنِّي مِنَ الْمُسْلِمِينَ",
-              style: Theme.of(context).textTheme.bodyText1,
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Divider(),
-          Padding(
-            padding:
-                EdgeInsets.all(SizeConfig.of(context).blockSizeVertical * 2),
-            child: Text(
-              "My Lord, enable me to be grateful for Your favor which You have bestowed upon me and upon my parents and to work righteousness of which You will approve and make righteous for me my offspring. Indeed, I have repented to You, and indeed, I am of the Muslims.",
-              style: Theme.of(context).textTheme.bodyText2,
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ],
-      ),
-    );
   }
 }

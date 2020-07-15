@@ -34,13 +34,17 @@ ThemeData _buildShrineTheme() {
         color: kDuaDarkBlue,
       ),
       bodyText1: GoogleFonts.amiri(
-        fontSize: SizeConfig().blockSizeVertical * 4,
+        fontSize: SizeConfig().blockSizeVertical * 3,
         height: SizeConfig().blockSizeVertical * 0.35,
         color: kDuaOrangeDark,
       ),
       bodyText2: GoogleFonts.roboto(
-        fontSize: SizeConfig().blockSizeVertical * 3,
+        fontSize: SizeConfig().blockSizeVertical * 2.5,
         color: kDuaBlackColor,
+      ),
+      caption: GoogleFonts.reemKufi(
+        color: kDuaDarkBlue,
+        fontSize: SizeConfig().blockSizeVertical * 2,
       ),
     ),
   );
