@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - release
+  pull_request:
+    branches: 
+      - release
 jobs:
   build_web:
     name: Test and Build Flutter Web App
