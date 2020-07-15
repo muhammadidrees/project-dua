@@ -1,5 +1,5 @@
 name: duas_pwa
-description: A new Flutter project.
+description: A Flutter PWA to generate duas from the Quran 
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
