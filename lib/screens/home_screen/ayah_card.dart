@@ -1,6 +1,7 @@
 import 'package:duas_pwa/utils/utils.dart';
 import 'package:flutter/material.dart';
 
+/// Card to display the ayah with it's reference and translation
 class AyahCard extends StatelessWidget {
   /// arabic of ayah
   final String ayah;
