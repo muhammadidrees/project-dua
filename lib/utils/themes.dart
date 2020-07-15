@@ -1,7 +1,7 @@
 part of 'utils.dart';
 
 /// default light theme of app
-final ThemeData _kLightTheme = _buildShrineTheme();
+final ThemeData kDuaLightTheme = _buildShrineTheme();
 
 ThemeData _buildShrineTheme() {
   // set original material theme as base theme
@@ -15,6 +15,11 @@ ThemeData _buildShrineTheme() {
       colorScheme: base.colorScheme.copyWith(
         secondary: kDuaOrangeLight,
       ),
+    ),
+    appBarTheme: AppBarTheme(
+      elevation: 0.0,
+      color: Colors.transparent,
+      centerTitle: true,
     ),
     buttonBarTheme: base.buttonBarTheme.copyWith(
       buttonTextTheme: ButtonTextTheme.accent,
