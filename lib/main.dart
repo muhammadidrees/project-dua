@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:duas_pwa/utils/utils.dart';
 
 void main() {
+  // make sure they are initialized
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 

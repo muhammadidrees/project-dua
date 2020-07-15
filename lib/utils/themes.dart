@@ -30,8 +30,17 @@ ThemeData _buildShrineTheme() {
     errorColor: kDuaOrangeDark,
     textTheme: base.textTheme.copyWith(
       // title of applicaion on appbar
-      headline5: GoogleFonts.reemKufi().copyWith(
+      headline5: GoogleFonts.reemKufi(
         color: kDuaDarkBlue,
+      ),
+      bodyText1: GoogleFonts.amiri(
+        fontSize: SizeConfig().blockSizeVertical * 4,
+        height: SizeConfig().blockSizeVertical * 0.35,
+        color: kDuaOrangeDark,
+      ),
+      bodyText2: GoogleFonts.roboto(
+        fontSize: SizeConfig().blockSizeVertical * 3,
+        color: kDuaBlackColor,
       ),
     ),
   );
