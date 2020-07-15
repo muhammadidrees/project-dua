@@ -1,4 +1,3 @@
-import 'package:duas_pwa/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:duas_pwa/utils/utils.dart';
 
@@ -11,9 +10,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: titleEnglish,
       theme: kDuaLightTheme,
-      home: HomeScreen(title: 'Dua'),
+      initialRoute: initialRoute,
+      onGenerateRoute: Router.generateRoute,
     );
   }
 }

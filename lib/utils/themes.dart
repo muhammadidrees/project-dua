@@ -28,5 +28,11 @@ ThemeData _buildShrineTheme() {
     cardColor: kDuaScaffoldBackgroundColor,
     textSelectionColor: kDuaOrangeLight,
     errorColor: kDuaOrangeDark,
+    textTheme: base.textTheme.copyWith(
+      // title of applicaion on appbar
+      headline5: GoogleFonts.reemKufi().copyWith(
+        color: kDuaDarkBlue,
+      ),
+    ),
   );
 }

@@ -1,5 +1,9 @@
 part of 'utils.dart';
 
+// Title of app
+const String titleArabic = "دعا";
+const String titleEnglish = "Dua";
+
 // Colors
 Color kDuaDarkBlue = const Color(0xFF0D3B66);
 Color kDuaYellow = const Color(0xFFF4D35E);

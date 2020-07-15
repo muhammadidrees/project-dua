@@ -5,10 +5,11 @@ class Router {
     switch (settings.name) {
       case initialRoute:
         return MaterialPageRoute(
-          builder: (ctx) => HomeScreen(),
+          builder: (ctx) => HomeScreen(title: titleArabic),
         );
       default:
-        return MaterialPageRoute(builder: (ctx) => HomeScreen());
+        return MaterialPageRoute(
+            builder: (ctx) => HomeScreen(title: titleArabic));
     }
   }
 }
