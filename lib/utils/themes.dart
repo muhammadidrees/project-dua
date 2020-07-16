@@ -25,7 +25,7 @@ ThemeData _buildShrineTheme() {
       buttonTextTheme: ButtonTextTheme.accent,
     ),
     scaffoldBackgroundColor: kDuaOffWhite,
-    cardColor: kDuaScaffoldBackgroundColor,
+    cardColor: kDuaCardColor,
     textSelectionColor: kDuaOrangeLight,
     errorColor: kDuaOrangeDark,
     textTheme: base.textTheme.copyWith(
@@ -34,10 +34,10 @@ ThemeData _buildShrineTheme() {
         color: kDuaDarkBlue,
       ),
       bodyText1: GoogleFonts.amiri(
-        fontSize: SizeConfig().blockSizeVertical * 4,
-        height: SizeConfig().blockSizeVertical * 0.35,
-        color: kDuaOrangeDark,
-      ),
+          fontSize: SizeConfig().blockSizeVertical * 4,
+          height: SizeConfig().blockSizeVertical * 0.4,
+          color: kDuaOrangeDark,
+          fontWeight: FontWeight.bold),
       bodyText2: GoogleFonts.roboto(
         fontSize: SizeConfig().blockSizeVertical * 2.5,
         color: kDuaBlackColor,
@@ -45,6 +45,7 @@ ThemeData _buildShrineTheme() {
       caption: GoogleFonts.reemKufi(
         color: kDuaDarkBlue,
         fontSize: SizeConfig().blockSizeVertical * 2,
+        fontWeight: FontWeight.bold,
       ),
     ),
   );

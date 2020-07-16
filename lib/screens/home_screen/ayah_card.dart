@@ -32,9 +32,9 @@ class AyahCard extends StatelessWidget {
         children: [
           ConstrainedBox(
             constraints: BoxConstraints(
-              maxHeight: MediaQuery.of(context).size.height * .3,
+              maxHeight: MediaQuery.of(context).size.height * .35,
               maxWidth: MediaQuery.of(context).size.width,
-              minHeight: MediaQuery.of(context).size.height * .3,
+              minHeight: MediaQuery.of(context).size.height * .35,
               minWidth: MediaQuery.of(context).size.width,
             ),
             child: Center(
@@ -46,12 +46,47 @@ class AyahCard extends StatelessWidget {
               ),
             ),
           ),
-          Divider(),
           ConstrainedBox(
             constraints: BoxConstraints(
-              maxHeight: MediaQuery.of(context).size.height * .3,
+              maxHeight: MediaQuery.of(context).size.height * .03,
               maxWidth: MediaQuery.of(context).size.width,
-              minHeight: MediaQuery.of(context).size.height * .3,
+              minHeight: MediaQuery.of(context).size.height * .03,
+              minWidth: MediaQuery.of(context).size.width,
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    color: Theme.of(context).primaryColor.withOpacity(.5),
+                    height: 1.0,
+                  ),
+                ),
+                Container(
+                  color: Theme.of(context).cardColor,
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.symmetric(horizontal: marginM),
+                  child: AutoSizeText(
+                    reference,
+                    maxLines: 1,
+                    minFontSize: 8.0,
+                    maxFontSize: 10.0,
+                    style: Theme.of(context).textTheme.caption,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    color: Theme.of(context).primaryColor.withOpacity(.5),
+                    height: 1.0,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              maxHeight: MediaQuery.of(context).size.height * .35,
+              maxWidth: MediaQuery.of(context).size.width,
+              minHeight: MediaQuery.of(context).size.height * .35,
               minWidth: MediaQuery.of(context).size.width,
             ),
             child: Center(
@@ -63,23 +98,6 @@ class AyahCard extends StatelessWidget {
               ),
             ),
           ),
-          ConstrainedBox(
-            constraints: BoxConstraints(
-              maxHeight: MediaQuery.of(context).size.height * .05,
-              maxWidth: MediaQuery.of(context).size.width,
-              minHeight: MediaQuery.of(context).size.height * .05,
-              minWidth: MediaQuery.of(context).size.width,
-            ),
-            child: Center(
-              child: AutoSizeText(
-                reference,
-                maxLines: 1,
-                minFontSize: 8.0,
-                maxFontSize: 8.0,
-                style: Theme.of(context).textTheme.caption,
-              ),
-            ),
-          )
         ],
       ),
     );

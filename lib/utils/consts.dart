@@ -10,7 +10,7 @@ Color kDuaYellow = const Color(0xFFF4D35E);
 Color kDuaOffWhite = const Color(0xFFFAF0CA);
 Color kDuaOrangeDark = const Color(0xFFF95738);
 Color kDuaOrangeLight = const Color(0xFFEE964B);
-Color kDuaScaffoldBackgroundColor = const Color(0xFFFFFFFF);
+Color kDuaCardColor = const Color(0xFFFFFFFF);
 Color kDuaBlackColor = const Color(0xFF000000).withOpacity(0.8);
 
 // Padding
