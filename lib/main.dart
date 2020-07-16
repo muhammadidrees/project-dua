@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: titleEnglish,
-      theme: kDuaLightTheme,
+      theme: kDuaDarkTheme,
       initialRoute: initialRoute,
       onGenerateRoute: Router.generateRoute,
     );

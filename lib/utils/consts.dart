@@ -10,7 +10,7 @@ Color kDuaYellow = const Color(0xFFF4D35E);
 Color kDuaOffWhite = const Color(0xFFFAF0CA);
 Color kDuaOrangeDark = const Color(0xFFF95738);
 Color kDuaOrangeLight = const Color(0xFFEE964B);
-Color kDuaCardColor = const Color(0xFFFFFFFF);
+Color kDuaWhiteColor = const Color(0xFFFFFFFF);
 Color kDuaBlackColor = const Color(0xFF000000).withOpacity(0.8);
 
 // Padding
@@ -43,6 +43,9 @@ const double spaceXL = 32.0;
 
 // default card border radius
 BorderRadius defaultBorderRadius = BorderRadius.circular(8.0);
+
+// default card elevation
+const double kdefaultElevation = 6.0;
 
 // Assets path
 const String jsonBasePath = "assets/json/";
