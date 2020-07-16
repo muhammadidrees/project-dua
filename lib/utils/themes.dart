@@ -34,7 +34,7 @@ ThemeData _buildShrineTheme() {
         color: kDuaDarkBlue,
       ),
       bodyText1: GoogleFonts.amiri(
-        fontSize: SizeConfig().blockSizeVertical * 3,
+        fontSize: SizeConfig().blockSizeVertical * 4,
         height: SizeConfig().blockSizeVertical * 0.35,
         color: kDuaOrangeDark,
       ),

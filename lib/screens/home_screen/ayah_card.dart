@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:duas_pwa/utils/utils.dart';
 import 'package:flutter/material.dart';
 
@@ -22,32 +23,62 @@ class AyahCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: SizeConfig.of(context).blockSizeHorizontal * 80,
-      padding: EdgeInsets.all(SizeConfig.of(context).blockSizeHorizontal * 2),
+      width: MediaQuery.of(context).size.width * .8,
+      height: MediaQuery.of(context).size.height * .8,
+      padding: EdgeInsets.all(paddingL),
       child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Padding(
-            padding:
-                EdgeInsets.all(SizeConfig.of(context).blockSizeVertical * 2),
-            child: Text(
-              ayah,
-              style: Theme.of(context).textTheme.bodyText1,
-              textAlign: TextAlign.center,
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              maxHeight: MediaQuery.of(context).size.height * .3,
+              maxWidth: MediaQuery.of(context).size.width,
+              minHeight: MediaQuery.of(context).size.height * .3,
+              minWidth: MediaQuery.of(context).size.width,
+            ),
+            child: Center(
+              child: AutoSizeText(
+                ayah,
+                style: Theme.of(context).textTheme.bodyText1,
+                textAlign: TextAlign.center,
+                minFontSize: 4.0,
+              ),
             ),
           ),
           Divider(),
-          Padding(
-            padding:
-                EdgeInsets.all(SizeConfig.of(context).blockSizeVertical * 2),
-            child: Text(
-              translation,
-              style: Theme.of(context).textTheme.bodyText2,
-              textAlign: TextAlign.center,
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              maxHeight: MediaQuery.of(context).size.height * .3,
+              maxWidth: MediaQuery.of(context).size.width,
+              minHeight: MediaQuery.of(context).size.height * .3,
+              minWidth: MediaQuery.of(context).size.width,
+            ),
+            child: Center(
+              child: AutoSizeText(
+                translation,
+                style: Theme.of(context).textTheme.bodyText2,
+                textAlign: TextAlign.center,
+                minFontSize: 4.0,
+              ),
             ),
           ),
-          Text(
-            reference,
-            style: Theme.of(context).textTheme.caption,
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              maxHeight: MediaQuery.of(context).size.height * .05,
+              maxWidth: MediaQuery.of(context).size.width,
+              minHeight: MediaQuery.of(context).size.height * .05,
+              minWidth: MediaQuery.of(context).size.width,
+            ),
+            child: Center(
+              child: AutoSizeText(
+                reference,
+                maxLines: 1,
+                minFontSize: 8.0,
+                maxFontSize: 8.0,
+                style: Theme.of(context).textTheme.caption,
+              ),
+            ),
           )
         ],
       ),
