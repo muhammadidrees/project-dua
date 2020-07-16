@@ -5,13 +5,14 @@ const String titleArabic = "دعا";
 const String titleEnglish = "Dua";
 
 // Colors
+Color kDuaDarkestBlue = const Color(0xFF001B3A);
 Color kDuaDarkBlue = const Color(0xFF0D3B66);
 Color kDuaYellow = const Color(0xFFF4D35E);
 Color kDuaOffWhite = const Color(0xFFFAF0CA);
 Color kDuaOrangeDark = const Color(0xFFF95738);
 Color kDuaOrangeLight = const Color(0xFFEE964B);
 Color kDuaWhiteColor = const Color(0xFFFFFFFF);
-Color kDuaBlackColor = const Color(0xFF000000).withOpacity(0.8);
+Color kDuaBlackColor = const Color(0xFF000000).withOpacity(0.7);
 
 // Padding
 const double paddingZero = 0.0;

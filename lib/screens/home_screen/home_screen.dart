@@ -1,5 +1,4 @@
 import 'package:duas_pwa/screens/home_screen/ayah_card/ayah_card.dart';
-import 'package:duas_pwa/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
