@@ -18,11 +18,14 @@ class ThemeCubit extends Cubit<bool> {
 
   /// set theme state to [themeValue] also stores those changes
   /// in local storage
-  void toggleTheme(bool themeValue) {
+  void toggleTheme(bool themeValue, {bool test = false}) {
     // store theme value in local storage
     _themeRepository.save(themeValue ? "dark" : "light");
     // call on native functionality to make manifest changes
-    js.context.callMethod('toggleTheme', [themeValue]);
+    // disable this line during unit test
+    if (!test) {
+      js.context.callMethod('toggleTheme', [themeValue]);
+    }
     // emit states simply meaning notifies builders
     // to adapt changes
     emit(themeValue);

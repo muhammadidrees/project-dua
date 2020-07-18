@@ -46,14 +46,14 @@ void main() {
     blocTest<ThemeCubit, bool>(
       'emits [false] when toggleTheme(false) is called',
       build: () => ThemeCubit(),
-      act: (cubit) async => cubit.toggleTheme(false),
+      act: (cubit) async => cubit.toggleTheme(false, test: true),
       expect: const <bool>[false],
     );
 
     blocTest<ThemeCubit, bool>(
       'emits [true] when toggleTheme(true) is called',
       build: () => ThemeCubit(),
-      act: (cubit) async => cubit.toggleTheme(true),
+      act: (cubit) async => cubit.toggleTheme(true, test: true),
       expect: const <bool>[true],
     );
   });
