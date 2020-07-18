@@ -1,12 +1,23 @@
+import 'package:duas_pwa/cubit/theme/theme_cubit.dart';
 import 'package:duas_pwa/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
+  // create a basic homescreen widget for testing
+  Widget homeScreen = MaterialApp(
+    // as the bloc values are used in widget creation
+    // wrapping with a bloc provider is essential
+    home: BlocProvider(
+      create: (context) => ThemeCubit(),
+      child: HomeScreen(title: 'T'),
+    ),
+  );
   // check if the home screen shows title
   testWidgets('HomeScreen has a title', (WidgetTester tester) async {
     // Create the widget by telling the tester to build it.
-    await tester.pumpWidget(MaterialApp(home: HomeScreen(title: 'T')));
+    await tester.pumpWidget(homeScreen);
 
     // Create the Finders.
     final titleFinder = find.text('T');
