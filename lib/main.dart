@@ -3,6 +3,7 @@ import 'package:duas_pwa/repository/repository.dart';
 import 'package:flutter/material.dart';
 import 'package:duas_pwa/utils/utils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:universal_html/js.dart' as js;
 
 void main() {
   // make sure they are initialized
@@ -23,6 +24,10 @@ class MyApp extends StatelessWidget {
     return FutureBuilder<String>(
         future: _themeRepository.getTheme(),
         builder: (context, snapshot) {
+          // load the native theme data based on localstorage data
+          if (snapshot.hasData) {
+            js.context.callMethod('toggleTheme', [snapshot.data == "dark"]);
+          }
           // show a page loader until we get data from our local
           // storage
           return (snapshot.hasData)

@@ -62,7 +62,9 @@ class AyahCard extends StatelessWidget {
           context,
           ayah,
           Theme.of(context).textTheme.bodyText1,
+          minFontSize: 12.0,
         ),
+        heightFactor: 0.4,
       ),
       // refereance with translation
       _constrainedBox(

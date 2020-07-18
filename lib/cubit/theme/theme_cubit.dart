@@ -1,3 +1,4 @@
+import 'package:universal_html/js.dart' as js;
 import 'package:duas_pwa/repository/repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,6 +21,8 @@ class ThemeCubit extends Cubit<bool> {
   void toggleTheme(bool themeValue) {
     // store theme value in local storage
     _themeRepository.save(themeValue ? "dark" : "light");
+    // call on native functionality to make manifest changes
+    js.context.callMethod('toggleTheme', [themeValue]);
     // emit states simply meaning notifies builders
     // to adapt changes
     emit(themeValue);
