@@ -1,5 +1,5 @@
-import 'package:cubit/cubit.dart';
 import 'package:duas_pwa/repository/repository.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 /// manage state theme using cubit by defining a [Cubit<bool>]
 /// the state of [true] indicated dark theme whereas [false] is

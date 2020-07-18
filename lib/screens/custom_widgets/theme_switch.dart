@@ -8,7 +8,7 @@ class ThemeSwitch extends StatelessWidget {
 
   /// just so I don't have to repeat that ugly commant :P
   bool _isDarkTheme(BuildContext context) {
-    return context.cubit<ThemeCubit>().state;
+    return context.bloc<ThemeCubit>().state;
   }
 
   @override
@@ -28,7 +28,7 @@ class ThemeSwitch extends StatelessWidget {
           inactiveThumbColor: kDuaWhiteColor,
           value: _isDarkTheme(context),
           onChanged: (value) {
-            context.cubit<ThemeCubit>().toggleTheme(value);
+            context.bloc<ThemeCubit>().toggleTheme(value);
           },
         ),
       ],

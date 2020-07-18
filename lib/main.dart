@@ -2,7 +2,7 @@ import 'package:duas_pwa/cubit/theme/theme_cubit.dart';
 import 'package:duas_pwa/repository/repository.dart';
 import 'package:flutter/material.dart';
 import 'package:duas_pwa/utils/utils.dart';
-import 'package:flutter_cubit/flutter_cubit.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   // make sure they are initialized
@@ -27,11 +27,11 @@ class MyApp extends StatelessWidget {
           // storage
           return (snapshot.hasData)
               // Provider for the theme cubit used to manage theme changes
-              ? CubitProvider(
-                  create: (_) =>
+              ? BlocProvider(
+                  create: (ctx) =>
                       ThemeCubit(initialTheme: snapshot.data == "dark"),
                   // rebuild the entire material widget on theme changes
-                  child: CubitBuilder<ThemeCubit, bool>(
+                  child: BlocBuilder<ThemeCubit, bool>(
                     builder: (context, isThemeDark) => MaterialApp(
                       title: titleEnglish,
                       theme: isThemeDark ? kDuaDarkTheme : kDuaLightTheme,
