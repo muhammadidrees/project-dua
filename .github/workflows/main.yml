@@ -16,7 +16,7 @@ jobs:
       with:
           channel: 'dev'
     - run: flutter pub get
-    - run: flutter test
+    # - run: flutter test
     - run: flutter config --enable-web
     - run: flutter build web
     - name: Archive Production Artifact
