@@ -1,3 +1,4 @@
+import 'package:duas_pwa/screens/custom_widgets/custom_widgets.dart';
 import 'package:duas_pwa/screens/home_screen/ayah_card/ayah_card.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,9 @@ class HomeScreen extends StatelessWidget {
           title,
           style: Theme.of(context).textTheme.headline5,
         ),
+        actions: [
+          ThemeSwitch(),
+        ],
       ),
       body: Container(
         // to give column max width
