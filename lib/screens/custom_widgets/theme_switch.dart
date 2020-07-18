@@ -6,6 +6,7 @@ class ThemeSwitch extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
+  /// just so I don't have to repeat that ugly commant :P
   bool _isDarkTheme(BuildContext context) {
     return context.cubit<ThemeCubit>().state;
   }
