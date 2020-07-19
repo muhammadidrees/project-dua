@@ -14,6 +14,10 @@ Color kDuaOrangeLight = const Color(0xFFEE964B);
 Color kDuaWhiteColor = const Color(0xFFFFFFFF);
 Color kDuaBlackColor = const Color(0xFF000000).withOpacity(0.7);
 
+// keys to be used for testing
+const String materialAppKey = "material_app";
+const String themeSwitchKey = "theme_switch";
+
 // Padding
 const double paddingZero = 0.0;
 const double paddingXS = 2.0;
