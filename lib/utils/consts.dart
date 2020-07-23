@@ -53,7 +53,8 @@ BorderRadius defaultBorderRadius = BorderRadius.circular(8.0);
 const double kdefaultElevation = 6.0;
 
 // Assets path
-const String jsonBasePath = "assets/json/";
+const String jsonDataPath = "assets/json/ayah_list.json";
+const String flareSwitchPath = "assets/flare/";
 
 // Routes
 const String initialRoute = '/';

@@ -47,4 +47,9 @@ class Ayah extends Equatable {
 
   @override
   List<Object> get props => [id];
+
+  @override
+  String toString() {
+    return "$ayah\n\n$translation\n\n$reference";
+  }
 }
