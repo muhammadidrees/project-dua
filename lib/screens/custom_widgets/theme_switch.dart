@@ -22,6 +22,7 @@ class ThemeSwitch extends StatelessWidget {
         ),
         // switch
         Switch(
+          key: Key(themeSwitchKey),
           activeColor: kDuaDarkBlue,
           activeTrackColor: kDuaBlackColor,
           inactiveTrackColor: kDuaOrangeLight,

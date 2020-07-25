@@ -1,3 +1,4 @@
+import 'package:duas_pwa/models/models.dart';
 import 'package:duas_pwa/screens/home_screen/ayah_card/ayah_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -6,13 +7,17 @@ void main() {
   // check if the home screen shows title
   testWidgets('AyahCard shows ayah translation and reference',
       (WidgetTester tester) async {
+    Ayah ayah = Ayah(
+      ayah: "رَبِّ",
+      translation: "master",
+      reference: "abc123",
+    );
+
     // Create the widget by telling the tester to build it.
     await tester.pumpWidget(
       MaterialApp(
         home: AyahCard(
-          ayah: "رَبِّ",
-          translation: "master",
-          reference: "abc123",
+          ayah: ayah,
         ),
       ),
     );

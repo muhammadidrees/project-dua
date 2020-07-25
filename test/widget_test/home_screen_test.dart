@@ -1,4 +1,6 @@
+import 'package:duas_pwa/bloc/ayah_bloc.dart';
 import 'package:duas_pwa/cubit/theme/theme_cubit.dart';
+import 'package:duas_pwa/repository/repository.dart';
 import 'package:duas_pwa/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,8 +11,18 @@ void main() {
   Widget homeScreen = MaterialApp(
     // as the bloc values are used in widget creation
     // wrapping with a bloc provider is essential
-    home: BlocProvider(
-      create: (context) => ThemeCubit(),
+    home: MultiBlocProvider(
+      providers: [
+        // theme bloc
+        BlocProvider<ThemeCubit>(
+          create: (context) => ThemeCubit(initialTheme: false),
+        ),
+        // ayah bloc
+        BlocProvider<AyahBloc>(
+          create: (context) =>
+              AyahBloc(ayahRepository: AyahRepository())..add(AyahFetched()),
+        ),
+      ],
       child: HomeScreen(title: 'T'),
     ),
   );
