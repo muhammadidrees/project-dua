@@ -40,6 +40,7 @@ ThemeData _buildDuaTheme() {
       // title of applicaion on appbar
       headline5: GoogleFonts.reemKufi(
         color: kDuaDarkBlue,
+        fontWeight: FontWeight.w400,
       ),
       // arabic text
       bodyText1: GoogleFonts.amiri(
@@ -52,12 +53,13 @@ ThemeData _buildDuaTheme() {
       bodyText2: GoogleFonts.roboto(
         fontSize: SizeConfig().blockSizeVertical * 2.5,
         color: kDuaBlackColor,
+        fontWeight: FontWeight.w400,
       ),
       // reference text
       caption: GoogleFonts.reemKufi(
         color: kDuaDarkBlue,
         fontSize: SizeConfig().blockSizeVertical * 2,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w400,
       ),
     ),
   );
