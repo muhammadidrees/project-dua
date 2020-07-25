@@ -14,6 +14,11 @@
   <!-- Favicon -->
   <link rel="shortcut icon" id="favicon" type="image/png"/>
 
+  <!-- Firebase Setup -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-messaging.js"></script>
+
   <title>Dua</title>
   <link rel="manifest" id="manifest">
   <script src="app.js" defer></script>
@@ -29,6 +34,8 @@
       });
     }
   </script>
+  <script src="./firebase-messaging-sw.js"></script>
+  <script src="fire_app.js"></script>
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
 </html>
