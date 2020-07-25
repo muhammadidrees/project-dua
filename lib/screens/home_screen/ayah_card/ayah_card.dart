@@ -51,11 +51,13 @@ class AyahCard extends StatelessWidget {
       // arabic ayah
       _constrainedBox(
         context,
-        _autoSizeText(
-          context,
-          ayah.ayah,
-          Theme.of(context).textTheme.bodyText1,
-          minFontSize: 12.0,
+        Center(
+          child: _autoSizeText(
+            context,
+            ayah.ayah,
+            Theme.of(context).textTheme.bodyText1,
+            minFontSize: 12.0,
+          ),
         ),
         heightFactor: 0.4,
       ),
@@ -114,9 +116,7 @@ class AyahCard extends StatelessWidget {
         minHeight: MediaQuery.of(context).size.height * heightFactor,
         minWidth: MediaQuery.of(context).size.width,
       ),
-      child: Center(
-        child: child,
-      ),
+      child: child,
     );
   }
 }

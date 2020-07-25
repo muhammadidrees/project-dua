@@ -28,9 +28,11 @@ class AyahBloc extends Bloc<AyahEvent, AyahState> {
         if (currentState is AyahSuccess) {
           final ayah = await _fetchAyah(currentAyah: currentState.ayah);
           yield AyahSuccess(ayah: ayah);
+          return;
         }
       } catch (_) {
         yield AyahFailure();
+        return;
       }
     }
   }
@@ -40,8 +42,12 @@ class AyahBloc extends Bloc<AyahEvent, AyahState> {
     // get data from repository
     List<Ayah> ayahList = await ayahRepository.get();
     // gererate random id to fetch a random ayah excluding the current ayah
-    // between 0 to the length of list
-    int randomId = generateRandom(int.parse(currentAyah?.id), ayahList.length);
+    // between 0 to the length of list if current ayah is not provided use
+    // the lenght of list as aurgument so ayah can be taken from the list
+    // without exclusion
+    int randomId = generateRandom(
+        int.parse(currentAyah?.id ?? ayahList.length.toString()),
+        ayahList.length);
     // finally return the corresponding ayah
     return ayahList[randomId];
   }
@@ -52,7 +58,7 @@ class AyahBloc extends Bloc<AyahEvent, AyahState> {
     int random;
     do {
       random = Random().nextInt(limit);
-    } while (random == (exclude ?? limit));
+    } while (random == (exclude));
     return random;
   }
 }

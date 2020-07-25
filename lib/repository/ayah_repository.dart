@@ -5,6 +5,7 @@ part of 'repository.dart';
 class AyahRepository {
   Future<List<Ayah>> get() async {
     // get json file as string
+    // note "assets/" is added by default :|
     String ayahJson = await rootBundle.loadString(jsonDataPath);
     // decode string to json list
     List<dynamic> ayahJsonList = json.decode(ayahJson) as List;
