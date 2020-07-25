@@ -29,9 +29,9 @@ class BottomActionBar extends StatelessWidget {
   List<Widget> _buildChildren(BuildContext context) {
     return [
       // screenshot button
-      RoundButton(
-        icon: Icons.photo_camera,
-      ),
+      // RoundButton(
+      //   icon: Icons.photo_camera,
+      // ),
       // random button to get new dua
       RoundButton(
         icon: Icons.refresh,
