@@ -1,4 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:duas_pwa/models/models.dart';
 import 'package:duas_pwa/utils/utils.dart';
 import 'package:flutter/material.dart';
 
@@ -6,14 +7,8 @@ part 'reference_text.dart';
 
 /// Card to display the ayah with it's reference and translation
 class AyahCard extends StatelessWidget {
-  /// arabic of ayah
-  final String ayah;
-
-  /// translation of ayah
-  final String translation;
-
-  /// reference of ayah
-  final String reference;
+  /// ayah model of the ayah to be represented
+  final Ayah ayah;
 
   /// height factor of the card the total height will be this
   /// factor multiplied by [MediaQuery.of(context).size.height]
@@ -26,8 +21,6 @@ class AyahCard extends StatelessWidget {
   const AyahCard({
     Key key,
     @required this.ayah,
-    @required this.translation,
-    @required this.reference,
   }) : super(key: key);
 
   @override
@@ -60,7 +53,7 @@ class AyahCard extends StatelessWidget {
         context,
         _autoSizeText(
           context,
-          ayah,
+          ayah.ayah,
           Theme.of(context).textTheme.bodyText1,
           minFontSize: 12.0,
         ),
@@ -69,7 +62,7 @@ class AyahCard extends StatelessWidget {
       // refereance with translation
       _constrainedBox(
         context,
-        AyahReference(reference: reference),
+        AyahReference(reference: ayah.reference),
         heightFactor: 0.05,
       ),
       // ayah translation
@@ -77,7 +70,7 @@ class AyahCard extends StatelessWidget {
         context,
         _autoSizeText(
           context,
-          translation,
+          ayah.translation,
           Theme.of(context).textTheme.bodyText2,
         ),
       ),

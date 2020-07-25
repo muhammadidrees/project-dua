@@ -28,8 +28,12 @@ ThemeData _buildDuaTheme() {
     buttonBarTheme: base.buttonBarTheme.copyWith(
       buttonTextTheme: ButtonTextTheme.accent,
     ),
+    floatingActionButtonTheme: base.floatingActionButtonTheme.copyWith(
+      backgroundColor: Colors.blue,
+    ),
     scaffoldBackgroundColor: kDuaOffWhite,
     cardColor: kDuaWhiteColor,
+    buttonColor: kDuaOrangeLight,
     textSelectionColor: kDuaOrangeLight,
     errorColor: kDuaOrangeDark,
     textTheme: base.textTheme.copyWith(
