@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc_test/bloc_test.dart';
-import 'package:duas_pwa/cubit/theme/theme_cubit.dart';
+import 'package:duas_pwa/cubit/theme_cubit.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 // mock theme cubit

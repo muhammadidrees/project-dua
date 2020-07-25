@@ -6,4 +6,4 @@ import 'package:universal_html/html.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 part 'storage_repository.dart';
-part 'ayah_repository.dart';
+part 'dua_repository.dart';

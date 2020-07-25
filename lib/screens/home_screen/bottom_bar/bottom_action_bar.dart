@@ -1,4 +1,4 @@
-import 'package:duas_pwa/bloc/ayah_bloc.dart';
+import 'package:duas_pwa/bloc/dua_bloc.dart';
 import 'package:duas_pwa/screens/custom_widgets/custom_widgets.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,6 +28,7 @@ class BottomActionBar extends StatelessWidget {
   /// row
   List<Widget> _buildChildren(BuildContext context) {
     return [
+      // TODO: Add screenshot funtionality
       // screenshot button
       // RoundButton(
       //   icon: Icons.photo_camera,
@@ -37,17 +38,17 @@ class BottomActionBar extends StatelessWidget {
         icon: Icons.refresh,
         backgroudColor: Theme.of(context).buttonColor,
         onPressed: () {
-          context.bloc<AyahBloc>().add(AyahFetched());
+          context.bloc<DuaBloc>().add(DuaFetched());
         },
       ),
       // copy content
       RoundButton(
         icon: Icons.content_copy,
         onPressed: () {
-          AyahState state = context.bloc<AyahBloc>().state;
-          if (state is AyahSuccess) {
-            // copy ayah to clipboard
-            Clipboard.setData(new ClipboardData(text: state.ayah.toString()));
+          DuaState state = context.bloc<DuaBloc>().state;
+          if (state is DuaSuccess) {
+            // copy Dua to clipboard
+            Clipboard.setData(new ClipboardData(text: state.dua.toString()));
             // show a snackbar message
             Scaffold.of(context).showSnackBar(_snackBar("Copied to ClipBoard"));
           }

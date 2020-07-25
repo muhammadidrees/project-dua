@@ -1,5 +1,5 @@
-import 'package:duas_pwa/bloc/ayah_bloc.dart';
-import 'package:duas_pwa/cubit/theme/theme_cubit.dart';
+import 'package:duas_pwa/bloc/dua_bloc.dart';
+import 'package:duas_pwa/cubit/theme_cubit.dart';
 import 'package:duas_pwa/repository/repository.dart';
 import 'package:flutter/material.dart';
 import 'package:duas_pwa/utils/utils.dart';
@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
   /// theme repository to get stored theme value if any
   final ThemeRepository _themeRepository = ThemeRepository();
 
-  /// ayah repository to get duas
-  final AyahRepository _ayahRepository = AyahRepository();
+  /// dua repository to get duas
+  final DuaRepository _duaRepository = DuaRepository();
 
   // This widget is the root of your application.
   @override
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
           // storage
           return (snapshot.hasData)
               // As we have multiple blocs therefore using MultiBlocProvider
-              // to provide both ThemeBloc and AyahBloc to the application
+              // to provide both ThemeBloc and DuaBloc to the application
               ? MultiBlocProvider(
                   providers: [
                     // theme bloc
@@ -44,11 +44,11 @@ class MyApp extends StatelessWidget {
                       create: (context) =>
                           ThemeCubit(initialTheme: snapshot.data == "dark"),
                     ),
-                    // ayah bloc
-                    BlocProvider<AyahBloc>(
+                    // dua bloc
+                    BlocProvider<DuaBloc>(
                       create: (context) =>
-                          AyahBloc(ayahRepository: _ayahRepository)
-                            ..add(AyahFetched()),
+                          DuaBloc(duaRepository: _duaRepository)
+                            ..add(DuaFetched()),
                     ),
                   ],
                   // rebuild the entire material widget on theme changes

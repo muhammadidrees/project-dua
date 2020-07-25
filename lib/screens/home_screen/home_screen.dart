@@ -1,7 +1,7 @@
-import 'package:duas_pwa/bloc/ayah_bloc.dart';
+import 'package:duas_pwa/bloc/dua_bloc.dart';
 import 'package:duas_pwa/screens/custom_widgets/custom_widgets.dart';
-import 'package:duas_pwa/screens/home_screen/ayah_card/ayah_card.dart';
 import 'package:duas_pwa/screens/home_screen/bottom_bar/bottom_action_bar.dart';
+import 'package:duas_pwa/screens/home_screen/dua_card/dua_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -42,19 +42,19 @@ class HomeScreen extends StatelessWidget {
     return [
       Expanded(
         flex: 5,
-        child: BlocBuilder<AyahBloc, AyahState>(
+        child: BlocBuilder<DuaBloc, DuaState>(
           builder: (context, state) {
-            // if ayah is successfully fetched show ayah card with the
-            // corresponding ayah
-            if (state is AyahSuccess) {
-              return AyahCard(ayah: state.ayah);
+            // if dua is successfully fetched show dua card with the
+            // corresponding Dua
+            if (state is DuaSuccess) {
+              return DuaCard(dua: state.dua);
             }
             // if error occured show error text
-            if (state is AyahFailure) {
+            if (state is DuaFailure) {
               return Center(child: Text("A problem occured please try again!"));
             }
             // in loading state show a circular loader
-            if (state is AyahLoading) {
+            if (state is DuaLoading) {
               return Center(child: CircularProgressIndicator());
             }
             // default state should be loading state :)

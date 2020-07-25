@@ -1,8 +1,8 @@
-part of 'ayah_card.dart';
+part of 'dua_card.dart';
 
-/// Widget used to show the [refernce] for an ayah between two lins
-class AyahReference extends StatelessWidget {
-  const AyahReference({
+/// Widget used to show the [refernce] for an dua between two lins
+class DuaReference extends StatelessWidget {
+  const DuaReference({
     Key key,
     @required this.reference,
   }) : super(key: key);

@@ -1,5 +1,5 @@
-import 'package:duas_pwa/bloc/ayah_bloc.dart';
-import 'package:duas_pwa/cubit/theme/theme_cubit.dart';
+import 'package:duas_pwa/bloc/dua_bloc.dart';
+import 'package:duas_pwa/cubit/theme_cubit.dart';
 import 'package:duas_pwa/repository/repository.dart';
 import 'package:duas_pwa/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,10 +17,10 @@ void main() {
         BlocProvider<ThemeCubit>(
           create: (context) => ThemeCubit(initialTheme: false),
         ),
-        // ayah bloc
-        BlocProvider<AyahBloc>(
+        // Dua bloc
+        BlocProvider<DuaBloc>(
           create: (context) =>
-              AyahBloc(ayahRepository: AyahRepository())..add(AyahFetched()),
+              DuaBloc(duaRepository: DuaRepository())..add(DuaFetched()),
         ),
       ],
       child: HomeScreen(title: 'T'),
