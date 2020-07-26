@@ -5,6 +5,9 @@
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
 
+  <link rel="manifest" id="manifest">
+  <script src="app.js" defer></script>
+
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -20,8 +23,6 @@
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-messaging.js"></script>
 
   <title>Dua</title>
-  <link rel="manifest" id="manifest">
-  <script src="app.js" defer></script>
 </head>
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
@@ -34,7 +35,7 @@
       });
     }
   </script>
-  <script src="./firebase-messaging-sw.js"></script>
+  <!-- <script src="./firebase-messaging-sw.js"></script> -->
   <script src="fire_app.js"></script>
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
