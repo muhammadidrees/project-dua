@@ -1,7 +1,10 @@
 import 'package:duas_pwa/bloc/dua_bloc.dart';
+import 'package:duas_pwa/cubit/theme_cubit.dart';
 import 'package:duas_pwa/screens/custom_widgets/custom_widgets.dart';
 import 'package:duas_pwa/screens/home_screen/bottom_bar/bottom_action_bar.dart';
 import 'package:duas_pwa/screens/home_screen/dua_card/dua_card.dart';
+import 'package:duas_pwa/utils/utils.dart';
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -25,13 +28,28 @@ class HomeScreen extends StatelessWidget {
           ThemeSwitch(),
         ],
       ),
-      body: Container(
-        // to give column max width
-        width: double.infinity,
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: _buildChildren(context),
-        ),
+      extendBody: true,
+      extendBodyBehindAppBar: true,
+      body: Stack(
+        children: [
+          FlareActor(
+            flareSwitchPath + "theme_change.flr",
+            alignment: Alignment.center,
+            fit: BoxFit.cover,
+            animation: (context.bloc<ThemeCubit>().state)
+                ? "day_to_night"
+                : "night_to_day",
+          ),
+          Container(
+            // to give column max width
+            width: double.infinity,
+            padding: EdgeInsets.only(top: 56.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: _buildChildren(context),
+            ),
+          ),
+        ],
       ),
     );
   }

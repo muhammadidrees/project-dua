@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
                       theme: isThemeDark ? kDuaDarkTheme : kDuaLightTheme,
                       initialRoute: initialRoute,
                       debugShowCheckedModeBanner: false,
-                      onGenerateRoute: Router.generateRoute,
+                      onGenerateRoute: AppRouter.generateRoute,
                     ),
                   ),
                 )

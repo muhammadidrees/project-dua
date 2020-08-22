@@ -28,7 +28,7 @@ class DuaCard extends StatelessWidget {
     return Material(
       borderRadius: defaultBorderRadius,
       elevation: kdefaultElevation,
-      color: Theme.of(context).cardColor,
+      color: Theme.of(context).cardColor.withOpacity(0.6),
       child: Container(
         width: MediaQuery.of(context).size.width * .8,
         height: MediaQuery.of(context).size.height * .8,
