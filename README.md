@@ -21,10 +21,10 @@
 
 - [Quick start](#quick-start)
 - [What's included](#whats-included)
-- [Bugs and feature requests](#bugs-and-feature-requests)
 - [Contributing](#contributing)
 - [Creators](#creators)
 - [Thanks](#thanks)
+- [Credits](#credits)
 - [Copyright and license](#copyright-and-license)
 
 ## Quick start
@@ -46,6 +46,7 @@ flutter run
 * Github Actions CICD for Firebase Hosting
 * BLOC + CUBIT state management
 * Browser local storage to remember theme changes
+* Flare animation on theme change
 * Dynamic PWA setup i.e. downloads the corresponding splash screen and app icon by accessing native web code through flutter code.
 * FCM setup using native code
 * Rookie tests :grinning:
@@ -64,8 +65,14 @@ When contributing to this repository, please first discuss the change you wish t
 
 Thanks to all contributors and their support
 
+## Credits
+
+Duas displayed in the app are scrapped from: <a href='http://duas.com/'>here</a>
+
+Background mosque art: <a href='https://www.freepik.com/vectors/background'>Background vector created by starline - freepik</a>
+
 ## Copyright and license
 
 Code and documentation copyright 2020 the authors. Code released under the [MIT License](https://github.com/muhammadidrees/project-dua/blob/master/LICENSE).
 
-Enjoy :metal:
+Enjoy :innocent:
