@@ -75,4 +75,4 @@ Background mosque art: <a href='https://www.freepik.com/vectors/background'>Back
 
 Code and documentation copyright 2020 the authors. Code released under the [MIT License](https://github.com/muhammadidrees/project-dua/blob/master/LICENSE).
 
-Enjoy :blessed:
+Enjoy :innocent:
