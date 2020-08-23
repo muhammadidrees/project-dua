@@ -16,6 +16,11 @@ class ThemeCubit extends Cubit<bool> {
   /// theme repository to store theme changes
   final ThemeRepository _themeRepository = ThemeRepository();
 
+  /// flag to indicate that either the state is initial i.e [true]
+  /// of if the state is chages as the flag will go false in the
+  /// [toggleTheme] method
+  bool _initial = true;
+
   /// set theme state to [themeValue] also stores those changes
   /// in local storage
   void toggleTheme(bool themeValue, {bool test = false}) {
@@ -26,8 +31,15 @@ class ThemeCubit extends Cubit<bool> {
     if (!test) {
       js.context.callMethod('toggleTheme', [themeValue]);
     }
+    // uncheck the initial flag indication that the comming
+    // states are no longer initial
+    _initial = false;
     // emit states simply meaning notifies builders
     // to adapt changes
     emit(themeValue);
   }
+
+  /// returns wheather the state is initial or not by returning
+  /// the flag [_initial] value
+  bool get isInitial => _initial;
 }
